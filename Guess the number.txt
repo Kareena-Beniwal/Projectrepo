@@ -1,0 +1,43 @@
+# NUMBER GUESSING GAME :)
+
+import random
+     # random is a python standard library which includes a set
+     # of methods like getstate(), randrange(), randint() and many more.
+
+
+def retry():
+    
+    # I've defined retry function in case the number we guessed do not 
+    # matches with that of computer.
+    
+    x=int(input())
+    if x==no_thought_by_computer:
+        print("Hurray! You guessed the correct number!")
+        return " "
+        
+    elif x!=no_thought_by_computer:
+        if x>no_thought_by_computer:
+            print("Oops! Try something smaller")
+            print(retry())
+            return " "
+        if x<no_thought_by_computer:
+            print("Oops! Try something bigger")
+            print(retry())
+            return " "
+
+no_thought_by_computer=random.randint(0,int(input()))
+no_guessed_by_user=int(input())
+
+
+if no_thought_by_computer==no_guessed_by_user:
+    print("Hurray! You guessed the correct number!")
+    
+elif no_guessed_by_user>no_thought_by_computer:
+    print("Oops! Try something smaller")
+    print(retry())
+    
+else:
+    print("Oops! Try something bigger")
+    print(retry())
+               
+           
